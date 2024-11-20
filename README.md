@@ -120,7 +120,7 @@ Below is an example of an HTML page with a ReactJS button component hosted throu
 
 
 <button class="mdc-button mdc-button--raised">
-  <span id="like_button_container" class="mdc-button__label">Like Button</span>
+  <span id="like_container" class="mdc-button__label">Like Button</span>
 </button>
 
 
@@ -129,10 +129,12 @@ Below is an example of an HTML page with a ReactJS button component hosted throu
    <script src="/api/x_marsl_nexus/appserv/route?react-dom.production.min.js" crossorigin></script> 
   
   <!-- Load our React component. -->
-  <script src="/api/x_marsl_nexus/appserv/route?likeButton.js" crossorigin></script>
+  <script src="/api/x_marsl_nexus/appserv/route?likeContainer.js" crossorigin></script>
 
-  <!-- Load Material UI -->
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+
+<!-- Load Material UI -->
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
 </body>
 </html>
@@ -208,7 +210,7 @@ Below is an example of a ReactJS button. In the HTML example above I have styled
 
 const e = React.createElement;
 
-class LikeButton extends React.Component {
+class likeText extends React.Component {
 
   constructor(props) {
     super(props);
@@ -221,7 +223,7 @@ class LikeButton extends React.Component {
     }
 
     return e(
-      'text',
+      'span',
       { onClick: () => this.setState({ liked: true }) },       
       'ReactJS Button'
     );
@@ -230,9 +232,9 @@ class LikeButton extends React.Component {
 }
 
 
-const domContainer = document.querySelector('#like_button_container');
+const domContainer = document.querySelector('#like_container');
 const root = ReactDOM.createRoot(domContainer);
-root.render(e(LikeButton));
+root.render(e(likeText));
 
 ```
 
