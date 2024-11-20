@@ -200,7 +200,7 @@ svg {
 
 ### Hosted ReactJS Button Component
 
-Below is an example of a CSS file to style the hosted HTML page.
+Below is an example of a ReactJS button. In the HTML example above I have styled it with Material UI.
 
 ```javascript
 
